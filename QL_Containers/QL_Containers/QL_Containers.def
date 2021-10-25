@@ -1,0 +1,16 @@
+; ql_containers.def : Declares the module parameters for the XLL.
+
+; LIBRARY      "QL_CONTAINERS"
+
+EXPORTS
+    ; Excel call-backs
+	xlAutoFree
+	xlAutoFree12
+	xlAutoOpen
+	xlAutoClose
+	xlAutoAdd
+	xlAutoRemove
+	xlAddInManagerInfo
+	xlAddInManagerInfo12
+;	xlCheckInstance
+

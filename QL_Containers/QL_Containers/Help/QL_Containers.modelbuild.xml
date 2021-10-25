@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Build xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <XsltFiles>
+    <XsltFile id="xslt_contents" ref="ContentsPage.xsl" />
+    <XsltFile id="xslt_function" ref="FunctionPage.xsl" />
+    <XsltFile id="xslt_section" ref="SectionPage.xsl" />
+    <XsltFile id="xslt_additionalpage" ref="AdditionalFilePage.xsl" />
+    <XsltFile id="xslt_hhp" ref="hhp.xsl" />
+    <XsltFile id="xslt_hhc" ref="hhc.xsl" />
+    <XsltFile id="xslt_hhk" ref="hhk.xsl" />
+    <XsltFile id="xslt_helpids" ref="helpids.xsl" />
+    <XsltFile id="xslt_intellisense" ref="intellisense.xsl" />
+  </XsltFiles>
+  <Params>
+    <Param name="HelpFile">$projectdir$\QL_Containers.help.xml</Param>
+    <Param name="Language">en</Param>
+  </Params>
+  <Transforms>
+    <Transform xslt="xslt_hhp" output="QL_Containers.hhp">
+      <Params />
+    </Transform>
+    <Transform xslt="xslt_hhc" output="QL_Containers.hhc">
+      <Params>
+        <Param name="ContentsFile">$projectdir$\QL_Containers.modelcontents.xml</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_hhk" output="QL_Containers.hhk">
+      <Params />
+    </Transform>
+    <Transform xslt="xslt_helpids" output="help_ids.h">
+      <Params />
+    </Transform>
+    <Transform xslt="xslt_contents" output="contents_QL_Containers.htm">
+      <Params />
+    </Transform>
+    <Transform xslt="xslt_section" output="section_User Defined.htm">
+      <Params>
+        <Param name="Category">User Defined</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_ArrayInputFn.htm">
+      <Params>
+        <Param name="Function">ArrayInputFn</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_GroupedFn.htm">
+      <Params>
+        <Param name="Function">GroupedFn</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_MatrixInputFn.htm">
+      <Params>
+        <Param name="Function">MatrixInputFn</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_QLContainerInputs.htm">
+      <Params>
+        <Param name="Function">QLContainerInputs</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_RetArrayFn.htm">
+      <Params>
+        <Param name="Function">RetArrayFn</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_function" output="function_RetMatrixFn.htm">
+      <Params>
+        <Param name="Function">RetMatrixFn</Param>
+      </Params>
+    </Transform>
+    <Transform xslt="xslt_intellisense" output="QL_Containers.intellisense.xml">
+      <Params />
+    </Transform>
+  </Transforms>
+  <CopyFiles>
+    <CopyFile fileName="$projectdir$\*.jpg" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="$projectdir$\*.gif" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="$projectdir$\*.png" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="$projectdir$\*.css" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="*.css" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="*.gif" recurse="true" overwrite="IfNewer" />
+    <CopyFile fileName="*.htm" recurse="true" overwrite="IfNewer" />
+  </CopyFiles>
+</Build>

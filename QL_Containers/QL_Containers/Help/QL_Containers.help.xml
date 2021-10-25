@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Help
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.planatechsolutions.com/xlp/601/help"
+    ArgumentSyntax="Continuation" HideArgumentSyntax="false">
+
+  <!-- 
+    Add elements to this file to override the contents of the 
+    compiled help file.
+    
+    You can:
+      - Change the title of the help file.
+      - Extend or replace the descriptions of functions and of their arguments.
+      - Add HTML content to functions and to arguments.
+      - Add additional SeeAlso links between pages.
+    -->
+
+  <!-- 
+      Project element
+        Controls the contents page, and the title of the add-in.
+      
+        Title attribute 
+          controls the title of the help, which appears on
+          the contents page, the contents tree, the title bar
+          and various links.
+
+          If omitted, the default value "<ProjectName> add-in" will
+          be used.
+        
+        Description element 
+          Appears at the top of the Contents page.
+          XHTML elements will be directly inserted into the page.
+          Simple text will be surrounded with a paragraph: <p>...</p>.
+        
+        Remarks element
+          One or more can appear, after the Description.
+          The caption of the section wil be "Remarks", unless the Caption
+          attribute is provided.
+  -->
+  <!--
+  <Project Title="Add-in title">
+    <Description>This description will appear at the top of the contents page.</Description>
+    <Remarks>
+      <p>A paragraph in a remarks section.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </Remarks>
+    <Remarks Caption="Title of this section">
+      <p>Content of remarks section</p>
+    </Remarks>
+  </Project>
+  -->
+  
+  <!--
+      Function element
+        Overrides or adds to the help for the named add-in function.
+        
+        ExportedName attribute
+          is required, and identifies the function to be documented.
+        
+        Description element 
+          Appears at the top of the page, immediately after the help
+          provided for the function in the XLL+ Function Wizard.
+          XHTML elements will be directly inserted into the page.
+          Simple text will be surrounded with a paragraph: <p>...</p>.
+        
+        Remarks element
+          One or more can appear, after the Description.
+          The caption of the section wil be "Remarks", unless the Caption
+          attribute is provided.
+          
+        SeeAlso element
+          inserts a link into the See Also list for a page. The text 
+          of the element will appear as the link title; the target
+          of the link is controlled by the href attribute.
+          
+          
+        Argument element
+          controls the documentation of one of the function's
+          arguments, specified by name, using the Name attribute.
+          
+          Syntax attribute
+            controls the appearance of the additional syntax 
+            information which derived from the signature of the 
+            argument (e.g. "X is an array of numbers..."). This can
+            follow directly on from the basic syntax, appear
+            in a new paragraph, or be hidden.
+
+            TextDescription element
+              Can be used to replace or supplement the help
+              provided for the argument in the XLL+ Function Wizard,
+              without creating a new paragraph.
+              
+            Description element 
+              Appears immediately after the help
+              provided for the argument in the XLL+ Function Wizard.
+              XHTML elements will be directly inserted into the page.
+              Simple text will be surrounded with a paragraph: <p>...</p>.
+  -->
+
+  <!--
+  <Function ExportedName="MyFunction">
+    <Description>This description follows the name of the function, and any description
+      that is provided in the function's HelpText.
+      <p>And this appears in the next paragraph.</p>
+    </Description>
+
+    <Remarks>
+      <p>Some remarks about the function. These appear after the Syntax section.</p>
+    </Remarks>
+    
+    <SeeAlso href="function_AnotherFunction.htm">AnotherFunction</SeeAlso>
+
+    <Argument Name="Arg1" Syntax="Continuation">
+      <Description>More basic description.</Description>
+    </Argument>
+
+    <Argument Name="Arg2">
+      <TextDescription Position="Replace">
+        This text completely replaces the HelpText provided for the argument
+        in the Function Wizard. 
+      </TextDescription>
+    </Argument>
+  </Function>
+  -->
+
+  <!--
+      AdditionalFile element
+        Adds an external HTML file to the help system.
+        
+        Source attribute
+          is required. It should be set to the file name. Additional files must be 
+          in the same directory as the help file that specifies them. 
+
+        ApplyCommonFormats
+          is optional. If present, it should be true or false. If true,
+          then the source file must be XHTML, using the schema http://www.w3.org/1999/xhtml;
+          the title element and the contents of the body element will be extracted 
+          and placed into a standard page.
+          If not present or false, then the file will be copied into the help project 
+          with no changes. 
+          
+        Title attribute
+          is optional. If present, it will be used as the page's title. If not,
+          then the title element of the HTML file will be used. 
+          
+        SeeAlso element
+          inserts a link into the See Also list for a page. The text 
+          of the element will appear as the link title; the target
+          of the link is controlled by the href attribute.
+          These elements will be ignored unless ApplyCommonFormat is true.
+  -->
+
+  <!--
+  <AdditionalFile Source="MyFile.htm" Title="My Topic" ApplyCommonFormat="true">
+    <SeeAlso href="function_AnotherFunction.htm">AnotherFunction</SeeAlso>
+  </AdditionalFile>
+  <AdditionalFile Source="AnotherFile.htm" Title="My Topic" ApplyCommonFormat="false"/>
+  -->
+
+</Help>

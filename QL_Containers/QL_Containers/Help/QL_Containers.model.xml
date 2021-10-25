@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ProjectRoot="QL_Containers">
+  <Functions>
+    <XlFunction Flags="ThreadSafe" ExportedName="ArrayInputFn" Category="14" HelpId="1001" Description="Test integration of QuantLib::Array class" SourceFile="string" SourceLine="152" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="ArrayInputFn">
+      <Arguments>
+        <XlArgument Name="Arg1" Description="A QuantLib style 1-d array" ContainerClass="QArrayT&lt;T&gt;">
+          <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+            <Bounds>
+              <XlBound Index="0">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+            </Bounds>
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+    <XlFunction Flags="ThreadSafe" ExportedName="GroupedFn" Category="14" HelpId="1002" Description="Demonstrates the use of a group of QuantLib::Array inputs" SourceFile="string" SourceLine="418" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="GroupedFn">
+      <Arguments>
+        <XlArgument xsi:type="XlGroup" Name="Distributions" GroupType="Sequence">
+          <Signature Type="Group">
+            <Bounds>
+              <XlBound Index="0">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+            </Bounds>
+            <ExtendedParameters />
+          </Signature>
+          <Arguments>
+            <XlArgument Name="Means" Description="A vector of means">
+              <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+                <Bounds>
+                  <XlBound Index="0">
+                    <Parts>
+                      <XlBoundPart />
+                      <XlBoundPart />
+                    </Parts>
+                  </XlBound>
+                </Bounds>
+                <ExtendedParameters />
+              </Signature>
+            </XlArgument>
+            <XlArgument Name="StdDevs" Description="A vector of standard deviations">
+              <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+                <Bounds>
+                  <XlBound Index="0">
+                    <Parts>
+                      <XlBoundPart />
+                      <XlBoundPart />
+                    </Parts>
+                  </XlBound>
+                </Bounds>
+                <ExtendedParameters />
+              </Signature>
+            </XlArgument>
+          </Arguments>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+    <XlFunction Flags="ThreadSafe" ExportedName="MatrixInputFn" Category="14" HelpId="1003" Description="Demonstrates use of QuantLib Matrix class adapter" SourceFile="string" SourceLine="88" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="MatrixInputFn">
+      <Arguments>
+        <XlArgument Name="Arg1" Description="A QuantLib style 2d array" ContainerClass="QMatrixT&lt;T&gt;">
+          <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+            <Bounds>
+              <XlBound Index="0">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+              <XlBound Index="1">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+            </Bounds>
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+    <XlFunction Flags="ThreadSafe" ExportedName="QLContainerInputs" Category="14" HelpId="1004" Description="Demonstrates the use of QuantLib container classes for inputs" SourceFile="string" SourceLine="342" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="QLContainerInputs">
+      <Arguments>
+        <XlArgument Name="m" Description="is a matrix">
+          <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+            <Bounds>
+              <XlBound Index="0">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+              <XlBound Index="1">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+            </Bounds>
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+        <XlArgument Name="v" Description="is a vector">
+          <Signature Type="Double" Flags="TruncateOnNil TruncateOnBlank">
+            <Bounds>
+              <XlBound Index="0">
+                <Parts>
+                  <XlBoundPart />
+                  <XlBoundPart />
+                </Parts>
+              </XlBound>
+            </Bounds>
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+    <XlFunction Flags="ThreadSafe" ExportedName="RetArrayFn" Category="14" HelpId="1005" Description="Demonstrates returning a QuantLib::Array to Excel" SourceFile="string" SourceLine="215" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="RetArrayFn">
+      <Arguments>
+        <XlArgument Name="size" Description="Size of array">
+          <Signature Type="Int">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+        <XlArgument Name="start" Description="Starting value">
+          <Signature Type="Double">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+        <XlArgument Name="inc" Description="Increment">
+          <Signature Type="Double">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+    <XlFunction Flags="ThreadSafe" ExportedName="RetMatrixFn" Category="14" HelpId="1006" Description="Demonstrates returning a QuantLib::Matrix class" SourceFile="string" SourceLine="276" CategoryForLocale="User Defined" CategoryUSEnglish="User Defined" SafeName="RetMatrixFn">
+      <Arguments>
+        <XlArgument Name="rows" Description="Number of rows of output">
+          <Signature Type="Int">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+        <XlArgument Name="cols" Description="Number of columns of output">
+          <Signature Type="Int">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+        <XlArgument Name="start" Description="Starting value">
+          <Signature Type="Double">
+            <Bounds />
+            <ExtendedParameters />
+          </Signature>
+        </XlArgument>
+      </Arguments>
+      <Extensions />
+      <Enums />
+    </XlFunction>
+  </Functions>
+  <Sections>
+    <Section Category="User Defined" Title="User Defined functions" CategoryId="14" />
+  </Sections>
+</Project>
