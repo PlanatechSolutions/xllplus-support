@@ -34,9 +34,12 @@ in the project's compiler flags, which will suppress the following code in `ql_a
 ## Creating input arguments
 
 1.  Select the argument in the ***XLL+ Function Wizard***.
-1.  Press the `Details` button (or press `Alt+Enter`). ![Picture of XLL+ Function Wizard](docs/details_button.png)
-1.  For a vector input, select the `Vector` tab and enter `QArrayT<T>`. ![Picture of XLL+ Argument Details Dialog for Vectors](docs/details_vector_tab.png)
-1.  For a matrix input, select the `Matrix` tab and enter `QMatrixT<T>`. ![Picture of XLL+ Argument Details Dialog for Matrices](docs/details_matrix_tab.png)
+1.  Press the `Details` button (or press `Alt+Enter`).  
+![Picture of XLL+ Function Wizard](docs/details_button.png)
+1.  For a vector input, select the `Vector` tab and enter `QArrayT<T>`.  
+![Picture of XLL+ Argument Details Dialog for Vectors](docs/details_vector_tab.png)
+1.  For a matrix input, select the `Matrix` tab and enter `QMatrixT<T>`.  
+![Picture of XLL+ Argument Details Dialog for Matrices](docs/details_matrix_tab.png)
 
 ## Generated code 
 
@@ -113,4 +116,4 @@ https://www.planatechsolutionscom/xllplus/download.htm.
 
 To acquire a license for commercial usage, please refer to http://www.planatechsolutions.com/store/.
 
-Copyright © Planatech Solutions Ltd, 2021. All rights reserved. All trademarks are the properties of their respective owners.
+Copyright ï¿½ Planatech Solutions Ltd, 2021. All rights reserved. All trademarks are the properties of their respective owners.
