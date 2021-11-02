@@ -1,4 +1,4 @@
-# XllPLus-Support
+# xllplus-support
 
 This repo contains support material for [XLL Plus](https://planatechsolutions.com/xllplus) from Planatech Solutions.
 
