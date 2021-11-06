@@ -18,4 +18,4 @@ https://www.planatechsolutionscom/xllplus/download.htm.
 
 To acquire a license for commercial usage, please refer to http://www.planatechsolutions.com/store/.
 
-Copyright � Planatech Solutions Ltd, 2021. All rights reserved. All trademarks are the properties of their respective owners.
+Copyright &copy; Planatech Solutions Ltd, 2021. All rights reserved. All trademarks are the properties of their respective owners.
